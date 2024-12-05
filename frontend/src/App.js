@@ -9,7 +9,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // } from "react-router-dom";
 import "./App.css";
 import { Login } from "./features/auth/components/Login";
-import { LoginPage, SignupPage } from "./pages";
+import {
+  ForgotPasswordPage,
+  LoginPage,
+  ResetPasswordPage,
+  SignupPage,
+} from "./pages";
 
 function App() {
   return (
@@ -17,6 +22,12 @@ function App() {
       <Routes>
         <Route exact path="/signup" element={<SignupPage />} />
         <Route exact path="/login" element={<LoginPage />} />
+        <Route exact path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route
+          exact
+          path="/reset-password/:userId/:passwordResetToken"
+          element={<ResetPasswordPage />}
+        />
       </Routes>
     </Router>
   );
