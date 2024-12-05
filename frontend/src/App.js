@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import {BrowserRouter as Router,Routes,Route} from  'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import {
 //   Navigate,
 //   Route,
@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route exact path="/signup" element={<SignupPage />} />
       </Routes>
     </Router>
   );
